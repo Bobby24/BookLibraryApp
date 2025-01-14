@@ -26,5 +26,59 @@ namespace BookLibraryApp
         {
             this.InitializeComponent();
         }
+
+        private void Delete_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            // Add your event handler logic here
+        }
+        private void ExitContextMenu_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            // Exit context menu click logic here
+        }
+
+        private void AddOption_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            // Add option click logic here
+        }
+
+        private void DeleteOption_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            // Delete option click logic here
+        }
+
+        private void FindOption_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            // Find option click logic here
+        }
+
+        private void AuthorSort_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            // Author sort click logic here
+        }
+
+        private void TitleSort_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            // Title sort click logic here
+        }
+
+        private void YearSort_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            // Year sort click logic here
+        }
+
+        private void Exit_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            // Exit click logic here
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

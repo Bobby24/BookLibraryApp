@@ -8,7 +8,46 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="LightBlue">
 
+        <Grid.ContextFlyout>
+            <MenuFlyout>
+                <MenuFlyoutItem x:Name="Delete" Text="Delete Book" Click="Delete_Click"/>
+                <MenuFlyoutSeparator/>
+                <MenuFlyoutItem x:Name="ExitContextMenu" Text="Exit" Click="ExitContextMenu_Click"/>
+            </MenuFlyout>
+        </Grid.ContextFlyout>
+
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton x:Name="Action" Icon="Sync" Label="Book Action">
+                <AppBarButton.Flyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem x:Name="AddOption" Text="Add" Click="AddOption_Click"/>
+                        <MenuFlyoutItem x:Name="DeleteOption" Text="Delete" Click="DeleteOption_Click"/>
+                        <MenuFlyoutItem x:Name="FindOption" Text="Find" Click="FindOption_Click"/>
+                    </MenuFlyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+            <AppBarButton x:Name="Sort" Icon="Edit" Label="Sort">
+                <AppBarButton.Flyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem x:Name="AuthorSort" Text="Author" Click="AuthorSort_Click"/>
+                        <MenuFlyoutItem x:Name="TitleSort" Text="Title" Click="TitleSort_Click"/>
+                        <MenuFlyoutItem x:Name="YearSort" Text="Year" Click="YearSort_Click"/>
+                    </MenuFlyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+            <AppBarButton x:Name="Exit" Icon="Clear" Label="Exit" Click="Exit_Click"/>
+        </CommandBar>
+        <ListView Margin="125,94,1045,238">
+            <TextBox x:Name="Author_name" TextWrapping="Wrap" Text="Author's Name" Height="200" Width="200"/>
+            <TextBox x:Name="Book_Title" TextWrapping="Wrap" Text="Bookt Title" Height="200" Width="200" TextChanged="TextBox_TextChanged"/>
+            <TextBox x:Name="Publication_Year" TextWrapping="Wrap" Text="Publication Year" Height="200" Width="200"/>
+            <TextBlock x:Name="Message_here" TextWrapping="Wrap" Text="Message here!" FontWeight="Bold" SelectionChanged="TextBlock_SelectionChanged"/>
+        </ListView>
+        <ListView x:Name="ListView" HorizontalAlignment="Left" Background="LightCyan" Height="400" Margin="460,94,0,0" VerticalAlignment="Top" Width="400"/>
     </Grid>
 </Page>
